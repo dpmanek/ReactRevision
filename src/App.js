@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Pfc from './Components/Props/functionalComponent';
+import Pcc from './Components/Props/classComponent';
+import Scc from './Components/State/classComponent';
+import Sfc from './Components/State/functionalComponent';
+import Navbar from './Components/Navbar/Navbar'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+		<Navbar/>
+			<Pfc name="Deep" age='50'></Pfc>
+			<Pfc name="Nirav" age='50'></Pfc>
+			<Pfc name="Amisha" age='50'></Pfc>
+			<hr />
+			<Pcc name="Deep" age='80'></Pcc>
+			<Pcc name="Nirav" age='80'></Pcc>
+			<Pcc name="Amisha" age='80'></Pcc>
+			<hr />
+			<Scc></Scc>
+			<hr />
+			<Sfc></Sfc>
+		</div>
+	);
 }
 
 export default App;
